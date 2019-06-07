@@ -11506,11 +11506,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\38128442813\\Documents\\2019\\ProjetoFinal.MVC\\ProjetoFinal.MVC.csproj",
+      "projectUniqueName": "c:\\Users\\38128442813\\Documents\\2019\\ProjetoFinal.MVC\\Ponto-Digital-MVC\\ProjetoFinal.MVC.csproj",
       "projectName": "ProjetoFinal.MVC",
-      "projectPath": "C:\\Users\\38128442813\\Documents\\2019\\ProjetoFinal.MVC\\ProjetoFinal.MVC.csproj",
+      "projectPath": "c:\\Users\\38128442813\\Documents\\2019\\ProjetoFinal.MVC\\Ponto-Digital-MVC\\ProjetoFinal.MVC.csproj",
       "packagesPath": "C:\\Users\\38128442813\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\38128442813\\Documents\\2019\\ProjetoFinal.MVC\\obj\\",
+      "outputPath": "c:\\Users\\38128442813\\Documents\\2019\\ProjetoFinal.MVC\\Ponto-Digital-MVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

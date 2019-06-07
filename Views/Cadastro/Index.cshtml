@@ -1,45 +1,35 @@
-@{
-Layout = "_Layout";
-}
-
 <header>
     @{
-        Html.RenderPartial("_HeaderNavBar");
+    Html.RenderPartial("_HeaderNavBar");
     }
 </header>
 
 <main>
     <h2>Bem Vindo</h2>
-    <form method="POST" action='@Url.Action("Cadastrar" , "Cadastro")'>
-        <div>
-            <label for="nome">Nome Completo</label>
-            <br />
-            <input id="nome" type="text" maxlength="20" minlength="3" name="nome" />
-        </div>
+    <form  action='@Url.Action("Index","Cadastro")' method="POST">
+       <div class="container">
 
-        <div>
-            <label for="telefone">Telefone para contato</label>
-            <br />
-            <input id="telefone" type="text" name="telefone"/>
-        </div>
-
-        <div>
-            <label for="email">E-mail</label>
-            <br />
-            <input id="email" type="email" name="email"/>
-        </div>
-         <div>
-            <label for="data-nascimento">Data De nascimento</label>
-            <br />
-            <input id="data-nascimento" type="Date" name="data-nascimento"/>
-        </div>
-         <div>
-            <label for="senha">Senha</label>
-            <br />
-            <input id="senha" type="password" name="senha"/>
-        </div>
-        
-        <input type="submit" value="Cadastrar" />
+                <label for="nome">Nome Completo</label>
+                
+                <input id="nome" type="text" maxlength="20" minlength="3" name="nome" />
+            
+                <label for="email">E-mail</label>
+                
+                <input id="email" type="email" name="email" />
+            
+                <label for="senha">Senha</label>
+                
+                <input id="senha" type="password" name="senha" />
+            
+                <label for="telefone">Telefone para contato</label>
+                
+                <input id="telefone" type="text" name="telefone" />
+            
+                <label for="data-nascimento">Data De nascimento</label>
+                
+                <input id="data-nascimento" type="Date" name="data-nascimento" />
+            
+            <input type="submit" value="Cadastrar" />
+       </div>
     </form>
-
 </main>

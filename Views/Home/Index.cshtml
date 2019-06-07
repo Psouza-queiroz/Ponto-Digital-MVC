@@ -1,18 +1,13 @@
 @{
 Layout = "_Layout";
 }
-
+<header>
+    @{
+        Html.RenderPartial("_HeaderNavBar");
+    }
+</header>
 
 <body>
-    <nav class="NavBar">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">planos e preços</a></li>
-            <li><a href="#">quem somos</a></li>
-            <li><a href="#">Cadastro/Login</a></li>
-
-        </ul>
-    </nav>
     <header>
         <div>
             <!--DivLogo-->
@@ -35,7 +30,20 @@ Layout = "_Layout";
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.8869961505543!2d-46.648477085071065!3d-23.53656648469522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5843deade6e3%3A0x124f377d06c7e71f!2sAlameda+Bar%C3%A3o+de+Limeira%2C+539+-+Campos+El%C3%ADseos%2C+S%C3%A3o+Paulo+-+SP%2C+01202-001!5e0!3m2!1sen!2sbr!4v1550223658410"
                 width="1902" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
         </section>
-
+        <section id="sac">
+            <p>Sac</p>
+            <div>
+                <label for="nome">Nome Completo</label>
+                <input id="nome" type="text" maxlength="20" minlength="3" name="nome" />
+                <br>
+                <label for="Email">Email</label>
+                <input id="email" type="text" name="email">
+                <br>
+                <label for="digite">Escreva sua Duvida/Reclamação</label>
+                <input  id="digite" type="text" maxlength="140" minlength="2" name="digite">
+                <input type="submit" value="Enviar">
+            </div>
+        </section>
     </header>
     <!--fim da home-->
     <footer id="rodape_2">
