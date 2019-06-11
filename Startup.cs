@@ -16,7 +16,15 @@ namespace ProjetoFinal.MVC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddSession(options => 
+            {
+                options.Cookie.Name = ".ProjetoFinal.Session";
+                options.IdleTimeout = TimeSpan.FromSeconds(5);
+                options.Cookie.IsEssential = true;
+            });
         }
+        
+        
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -25,7 +33,15 @@ namespace ProjetoFinal.MVC
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+                app.UseHsts();
+            }
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
+            app.UseCookiePolicy();
+            app.UseSession();
             
             app.UseMvc(
                     rota => {

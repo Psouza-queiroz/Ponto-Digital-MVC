@@ -1,12 +1,22 @@
-
+@{
+    var user = (string) ViewData["User"];
+}
 <nav>
     <div>
          <ul>
-            <li><a href="#">Principal</a></li>
-            <li><a href="#">Planos e Preços</a></li>
-            <li><a href="#">Quem Somos</a></li>
-            <li><a href='@Url.Action("Index","Cadastro")'>Cadastro/login</a></li>
-            <li><a href="#">Sac</a></li>
+            <li><a href='@Url.Action("Index","Home")'>Principal</a></li>
+            <li><a href='@Url.Action("Index","Home")#Produto'>Planos e Preços</a></li>
+            <li><a href='@Url.Action("Index","Home")#QuemSomos'>Quem Somos</a></li>
+            <li><a href='@Url.Action("Index","Home")#Sac'>Sac </a></li>
+            @if (string.IsNullOrEmpty(user))
+            {
+            <li><a href='@Url.Action("Login","Usuario")'>Login/Cadastro</a></li>
+            }else{
+                <li><a id="bt_Logout" asp-controller="Usuario" asp-action="Logout">Logout</a></li>
+            }
+             
+
+            
          </ul>
     </div>
 </nav>

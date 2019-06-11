@@ -1,12 +1,13 @@
 <header>
     @{
     Html.RenderPartial("_HeaderNavBar");
+    Layout = "_Layout";
     }
 </header>
 
 <main>
-    <h2>Bem Vindo</h2>
-    <form  action='@Url.Action("Index","Cadastro")' method="POST">
+    <h2>Cadastre</h2>
+    <form  action="Cadastro/Cadastrar" method="POST">
        <div class="container">
 
                 <label for="nome">Nome Completo</label>
