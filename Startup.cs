@@ -19,7 +19,7 @@ namespace ProjetoFinal.MVC
             services.AddSession(options => 
             {
                 options.Cookie.Name = ".ProjetoFinal.Session";
-                options.IdleTimeout = TimeSpan.FromSeconds(5);
+                options.IdleTimeout = TimeSpan.FromMinutes(10);
                 options.Cookie.IsEssential = true;
             });
         }

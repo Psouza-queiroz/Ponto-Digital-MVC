@@ -7,9 +7,12 @@ using ProjetoFinal.MVC.Repositorios;
 namespace Ponto_Digital_MVC.Controllers {
 
     public class CadastroController : Controller {
+         private  const string SESSION_EMAIL = "_EMAIL";
 
         [HttpGet]
         public IActionResult Index () {
+            ViewData["User"] = HttpContext.Session.GetString(SESSION_EMAIL);
+            
             return View ();
         }
 

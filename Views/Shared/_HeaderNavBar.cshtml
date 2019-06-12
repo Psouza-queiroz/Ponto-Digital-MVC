@@ -1,8 +1,13 @@
 @{
+    Layout = "_Layout";
+}
+
+@{
     var user = (string) ViewData["User"];
 }
-<nav>
-    <div>
+
+<nav class="NavBar">
+    <div >
          <ul>
             <li><a href='@Url.Action("Index","Home")'>Principal</a></li>
             <li><a href='@Url.Action("Index","Home")#Produto'>Planos e Preços</a></li>
@@ -12,11 +17,9 @@
             {
             <li><a href='@Url.Action("Login","Usuario")'>Login/Cadastro</a></li>
             }else{
-                <li><a id="bt_Logout" asp-controller="Usuario" asp-action="Logout">Logout</a></li>
-            }
-             
-
-            
+                <li><a href='@Url.Action("Logout","Usuario")'>Logout</a></li>
+                <li><a href='@Url.Action("Comentarios","Usuario")'>Comentarios</a></li>
+            }       
          </ul>
     </div>
 </nav>

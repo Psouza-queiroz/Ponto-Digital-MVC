@@ -53,7 +53,7 @@ namespace AspNetCore
             WriteLiteral("    ");
             EndContext();
             BeginContext(98, 143, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c78dde556b97416dae8980b0664bcac9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f91c3acb4b2042a9bd06310bcd7f316b", async() => {
                 BeginContext(104, 130, true);
                 WriteLiteral("\r\n        <meta charset=\"UTF-8\">\r\n        <link rel=\"stylesheet\" href=\"/css/style.css\">\r\n        <title>Poto Digital</title>\r\n    ");
                 EndContext();

@@ -12,13 +12,7 @@ namespace Ponto_Digital_MVC.Repositorios
 
         private List<CadastroModels> Cadastro = new List<CadastroModels> ();
 
-            public UsuarioRepositorio() {
-            if (File.Exists(PATH))
-            {
-                
-            }
         }
         
         
     }
-}
