@@ -7,7 +7,9 @@ namespace Ponto_Digital_MVC.Repositorios
 {
     public class ComentariosRepositorio
     {
+
         private  const string PATH_COMENTARIO = "Database/Comentarios.csv";
+        
 
         public void Comentarios (Comentarios comentarios){
 

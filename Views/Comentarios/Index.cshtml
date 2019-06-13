@@ -2,10 +2,10 @@
     Html.RenderPartial("_HeaderNavBar");
     Layout = "_Layout";
 }
-<h2>Bem Vindo </h2>
+<h2>Bem Vindo, Escreva sua Avaliação/Comentario</h2>
 <main>
-    <form method="POST" action='@Url.Action("Comentarios","Usuario")'>
-        <div>
+    <form method="POST" action="Comentarios/Comentarios">
+        <div class="comentario">
             <label for="nome"> Digite seu Nome</label>
             <input id="nome" type="text" name="nome" required >
 

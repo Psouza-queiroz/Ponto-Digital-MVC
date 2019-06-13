@@ -23,6 +23,7 @@ namespace Ponto_Digital_MVC.Controllers {
             var email = form["email"];
             var senha = form["senha"];
             var listaDeUsuario = cadastroRepositorio.Listar ();
+
             foreach (var item in listaDeUsuario) {
 
                 if (email.Equals (item.Email) && senha.Equals (item.Senha)) {
@@ -41,22 +42,6 @@ namespace Ponto_Digital_MVC.Controllers {
 
             return RedirectToAction ("Index", "Home");
         }
-
-        [HttpPost]
-        public IActionResult Comentarios (IFormCollection form) {
-            Comentarios comentarios = new Comentarios ();
-            comentarios.Nome = form["nome"];
-            comentarios.Comentario = form["comentario"];
-
-            HttpContext.Session.GetString (SESSION_EMAIL);
-
-            ComentariosRepositorio comentariosRepositorio = new ComentariosRepositorio ();
-            comentariosRepositorio.Comentarios (comentarios);
-
-            return View();
-        }
-
         
-
     }
 }

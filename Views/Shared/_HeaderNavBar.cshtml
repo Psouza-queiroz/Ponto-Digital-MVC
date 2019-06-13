@@ -5,6 +5,7 @@
 @{
     var user = (string) ViewData["User"];
 }
+<link href="/css/style.css"> 
 
 <nav class="NavBar">
     <div >
@@ -18,7 +19,8 @@
             <li><a href='@Url.Action("Login","Usuario")'>Login/Cadastro</a></li>
             }else{
                 <li><a href='@Url.Action("Logout","Usuario")'>Logout</a></li>
-                <li><a href='@Url.Action("Comentarios","Usuario")'>Comentarios</a></li>
+                
+                <li><a href='@Url.Action("Index","Comentarios")'>Comentarios</a></li>
             }       
          </ul>
     </div>

@@ -7,6 +7,11 @@ body{
     background-image: url(../imagens/fundo-azul.jpg);
     background-size: cover;
 }
+#logo_area {
+    background-position: center;
+    text-align: center;
+    padding: 1em;
+}
 nav > ul {
     list-style-type: none;
     display: flex;
@@ -19,7 +24,7 @@ nav > ul {
  }
  nav a {
     text-decoration: none;
-    color: #361a0c;
+    color: #00347f;
     font-weight: bold;
     padding: 0.65em 3em;
     font-size: 1.5em;
@@ -33,5 +38,45 @@ a{
     height: 100%;
     text-decoration: none; 
 }
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3em;
+    list-style-type: none;
+}
 
+nav a {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    padding: 0.4em 2em;
+}
+
+a.active {
+    color: #00347f;
+}
+
+nav a:hover {
+    background-color: #00347f;
+    color: #fff;
+    /* box-shadow: 0 2px #800000; */
+}
+.comentario{
+
+}
+form * {
+    margin: 5px 0;
+    text-align: left;
+    overflow: hidden;
+}
+form input, form select {
+    width: 100%;
+    height: 25px;
+    border: none;
+    text-align: left;
+    padding: 0 2px;
+}  
 

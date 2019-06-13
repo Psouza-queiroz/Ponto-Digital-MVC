@@ -3,18 +3,18 @@ html{
 }
 
 body{
-    background-color: #361a0c;
+    background-color: #0147aa;
     text-align: center;
     height: 100%;
 }
 h2{
     padding: 30px 0;
-    color: #a70000;
+    color: #00347f;
     text-shadow:
-    -1px -1px 0 #ff9933,
-    1px -1px 0 #ff9933,
-   -1px  1px 0 #ff9933,
-    1px  1px 0 #ff9933;
+    -1px -1px 0 #0147aa,
+    1px -1px 0 #0147aa,
+   -1px  1px 0 #0147aa,
+    1px  1px 0 #0147aa;
 }
 
 main{
@@ -28,7 +28,7 @@ form{
 } 
 
 label{
-    color: #ff9933;
+    color: #0147aa;
     font-weight: bold;
 }
 
@@ -44,4 +44,42 @@ form *{
 form > div{
     display: inline-block;
     width: 49.5%;
+}
+form input, form select {
+    width: 100%;
+    height: 25px;
+    border: none;
+    text-align: left;
+    padding: 0 2px;
+}  
+
+form label {
+    color: #0147aa;
+    font-weight: bold;
+}
+
+form input[type="submit"] {
+    background-color: #00347f;
+    border: 1px solid #00347f;
+    color: #361a0c;
+    margin: 20px 0;
+    height: 2em;
+    border-radius: 3px;
+    font-weight: bold;
+    text-align: center;
+}
+
+form input[type="submit"]:hover {
+    background-color: #00347f;
+    color: #0147aa;
+    border: 1px solid #0147aa;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    font-weight: bolder;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
