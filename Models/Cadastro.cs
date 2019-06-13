@@ -10,6 +10,7 @@ namespace Ponto_Digital_MVC.Models {
         public string Senha { get; set; }
         public string Telefone { get; set; }
         public DateTime DatadeNascimento { get; set; }
+        public bool ehAdmin { get; set; }
 
         public CadastroModels (StringValues nome, StringValues email, StringValues senha, string telefone, DateTime datadeNascimento) {
             Nome = nome;
@@ -17,6 +18,7 @@ namespace Ponto_Digital_MVC.Models {
             Senha = senha;
             Telefone = telefone;
             DatadeNascimento = datadeNascimento;
+            ehAdmin = false;
         }
 
         public CadastroModels () { }

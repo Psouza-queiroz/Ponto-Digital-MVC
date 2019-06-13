@@ -14,7 +14,7 @@ namespace Ponto_Digital_MVC.Controllers {
         CadastroRepositorio cadastroRepositorio = new CadastroRepositorio ();
         [HttpGet]
         public IActionResult Login () {
-            
+
             return View ();
         }
 
@@ -29,6 +29,9 @@ namespace Ponto_Digital_MVC.Controllers {
                 if (email.Equals (item.Email) && senha.Equals (item.Senha)) {
                     HttpContext.Session.SetString (SESSION_EMAIL, email);
                     // HttpContext.Session.SetString(SESSION_USUARIO, );
+                    if (item.ehAdmin) {
+                        return RedirectToAction ("Index", "Admin");
+                    }
                     System.Console.WriteLine ("ta logado");
                     return RedirectToAction ("Index", "Home");
                 }
@@ -42,6 +45,6 @@ namespace Ponto_Digital_MVC.Controllers {
 
             return RedirectToAction ("Index", "Home");
         }
-        
+
     }
 }

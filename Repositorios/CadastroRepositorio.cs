@@ -16,7 +16,7 @@ namespace ProjetoFinal.MVC.Repositorios {
             }
             StreamWriter sw = new StreamWriter (PATH, true);
 
-            sw.WriteLine ($"{cadastro.Id};{cadastro.Nome};{cadastro.Email};{cadastro.Senha};{cadastro.Telefone};{cadastro.DatadeNascimento.ToShortDateString()}");
+            sw.WriteLine ($"{cadastro.Id};{cadastro.Nome};{cadastro.Email};{cadastro.Senha};{cadastro.Telefone};{cadastro.DatadeNascimento.ToShortDateString()};{cadastro.ehAdmin}");
             sw.Close ();
         }
         public List<CadastroModels> Listar () {
@@ -35,6 +35,7 @@ namespace ProjetoFinal.MVC.Repositorios {
                 cadastro.Senha = dados[3];
                 cadastro.Telefone = dados[4];
                 cadastro.DatadeNascimento = DateTime.Parse (dados[5]);
+                cadastro.ehAdmin = bool.Parse (dados[6]);
 
                 listadeCadastro.Add (cadastro);
             }
