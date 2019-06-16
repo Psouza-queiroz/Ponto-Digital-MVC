@@ -1,0 +1,27 @@
+@using Ponto_Digital_MVC.Models;
+@{
+var lista = ViewData["cadastros"] as List<CadastroModels>;
+    }
+
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Senha</th>
+            <th>Telefone</th>
+            <th>Data de nascimento</th>
+        </thead>
+        <tbody>
+            @foreach(var item in lista){
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Nome</td>
+                <td>@item.Email</td>
+                <td>@item.Senha</td>
+                <td>@item.Telefone</td>
+                <td>@item.DatadeNascimento.ToShortDateString()</td>
+            </tr>
+            }
+        </tbody>
+    </table>

@@ -1,0 +1,28 @@
+@using Ponto_Digital_MVC.Models;
+@{
+var lista = ViewData["comentarios"] as List<Comentarios>;
+    }
+
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Comentario</th>
+            <th>Data do comentário</th>
+            <th>Estado</th>
+        </thead>
+        <tbody>
+            @foreach(var item in lista){
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Nome</td>
+                <td>@item.Comentario</td>
+                <td>@item.DataComentario.ToShortDateString()</td>
+                <td>@item.Estado</td>
+                <td><a href='@Url.Action("AprovarComentario","Admin")?id=@item.Id'>Aprovar</a></td>
+                <td><a href='@Url.Action("ReprovarComentario","Admin")?id=@item.Id'>Reprovar</a></td>
+
+            </tr>
+            }
+        </tbody>
+    </table>
