@@ -1,7 +1,11 @@
 @using Ponto_Digital_MVC.Models;
 @{
 var lista = ViewData["cadastros"] as List<CadastroModels>;
-    }
+}
+@{
+    Html.RenderPartial("_HeaderNavBar");
+    Layout = "_Layout";
+}
 
     <table>
         <thead>
